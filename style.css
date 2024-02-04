@@ -1,0 +1,528 @@
+:root {
+  --primary: #ffdd00;
+  --background: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--background);
+  color: #fff;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(0, 2, 95, 0.95);
+  border-bottom: 1px solid #b9b9b9;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  /* supaya navbar selalu diatas */
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.navbar .navbar-logo span {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a {
+  color: #fff;
+  display: inline-block;
+  font-size: 1rem;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: #fff;
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid #fff;
+  transform: scaleX(0);
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-extra a {
+  color: #fff;
+  margin: 0;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("img/tobias-wilden-4453DIQWtsQ-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 28%;
+  bottom: 0;
+}
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+}
+
+.hero .content h1 {
+  font-size: 5rem;
+  color: #ffffff;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.3);
+  line-height: 1;
+  font-weight: 550;
+}
+
+.hero .content p {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  line-height: 1.2;
+  font-weight: 300;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.3);
+  /* untuk membedakan warna yang sama
+    mix-blend-mode: difference; */
+}
+
+.hero .content .cta {
+  margin-top: 1rem;
+  display: inline-block;
+  font-size: 1.4rem;
+  color: #fff;
+  font-weight: 700;
+}
+
+/* About Section */
+.about {
+  padding: 7rem 7% 1.4rem;
+  color: #707070;
+  background-color: #fff;
+  min-height: 100vh;
+}
+
+.about h2,
+.tipeunit h2 {
+  text-align: left;
+  font-size: 2.6rem;
+  margin-bottom: 2rem;
+}
+
+.about .row {
+  display: flex;
+}
+
+.about .row .about-img {
+  flex: 1 1 55rem;
+}
+
+.about .row .about-img img {
+  width: 100%;
+}
+
+.about .row .content {
+  flex: 1 1 25rem;
+  padding: 0 1rem;
+  background-color: rgb(0, 2, 95);
+  color: #fff;
+}
+
+.about .row .content h3 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.about .row .content p {
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/* Tipe Unit Section*/
+.tipeunit {
+  padding: 7rem 7% 1.4rem;
+  color: #fff;
+  background-color: #707070;
+  min-height: 100vh;
+}
+
+.tipeunit h2 {
+  margin-bottom: 1rem;
+}
+
+.tipeunit .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  justify-content: center;
+}
+
+.tipeunit-card {
+  text-align: left;
+  max-width: 25rem;
+  padding-bottom: 3rem;
+}
+
+.tipeunit .row .tipeunit-card img {
+  border-radius: 3%;
+  width: 80%;
+}
+
+.tipeunit .row .tipeunit-card .tipeunit-card-tittle {
+  margin-top: 1.5rem;
+  color: #ffffff;
+}
+
+.tipeunit .row .tipeunit-card .tipeunit-card-p {
+  margin-top: 1rem;
+  max-width: 18rem;
+  color: #ffffff;
+}
+
+/* Fasilitas */
+.fasilitas {
+  padding: 7rem 7% 1.4rem;
+  color: #707070;
+  background-color: #fff;
+  min-height: 100vh;
+}
+
+.fasilitas h4 {
+  color: #707070;
+  font-size: 2.6rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.fasilitas p {
+  color: #707070;
+  max-width: 50rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.data-container {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-top: 3rem;
+  padding-left: 3rem;
+}
+
+.data-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+.icon {
+  margin-right: 1rem;
+  color: var(--primary); /* warna hijau untuk check-circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px; /* lebar check-circle */
+  height: 30px; /* tinggi check-circle */
+  border-radius: 50%; /* membuat bentuk lingkaran */
+}
+
+.icon svg {
+  width: 16px; /* ukuran ikon */
+  height: 16px;
+}
+
+.data-text {
+  text-align: center;
+}
+
+/* Galeri */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #707070;
+}
+
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 100vh;
+  padding-top: 7rem;
+}
+
+.gallery-item {
+  width: calc(
+    30% - 1rem
+  ); /* Menggunakan 33.33% untuk tiga gambar dalam satu baris */
+  margin: 0.5rem;
+  overflow: hidden;
+  border: 1px solid #707070;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .gallery-item {
+    width: calc(
+      48% - 1rem
+    ); /* Menggunakan 50% untuk dua gambar dalam satu baris pada tata letak responsif */
+  }
+}
+
+/* Kontak */
+.contact {
+  padding: 7rem 7% 1.4rem;
+  color: #fff;
+  background-color: #ffffff;
+  min-height: 80vh;
+}
+
+.contact h4 {
+  text-align: left;
+  font-size: 2.6rem;
+  margin-bottom: 2rem;
+}
+
+.contact p {
+  text-align: left;
+  max-width: 30rem;
+  font-weight: 300;
+  line-height: 1.5rem;
+  margin-top: 1rem;
+}
+
+.contact .row {
+  display: flex;
+  margin-top: 1rem;
+  background-color: #eee;
+}
+
+.contact .row .map {
+  flex: 1 1 60rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.contact .row .contact-data {
+  flex: 1 1 20rem;
+  padding: 5rem 1rem;
+  text-align: left;
+  color: black;
+  padding-top: 1rem;
+  height: 30rem;
+}
+
+/* Footer */
+footer {
+  background-color: rgb(0, 2, 95);
+  text-align: center;
+  padding: 1rem 0 3rem;
+  margin-top: 0rem;
+}
+
+footer .socials {
+  padding: 1rem 0;
+}
+
+footer .socials a {
+  color: #fff;
+  margin: 1rem;
+}
+
+footer .socials a:hover,
+footer .links a:hover {
+  color: var(--primary);
+}
+
+footer .links {
+  margin-bottom: 1.4rem;
+}
+
+footer .links a {
+  color: #fff;
+  padding: 0.7rem 1rem;
+}
+
+footer .credit {
+  font-size: 0.8rem;
+}
+
+footer .credit a {
+  color: #ffe32a;
+  font-weight: 700;
+}
+
+/* Logo WhatsApp */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+}
+
+.whatsapp-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+.whatsapp-logo {
+  width: 60px;
+  height: 60px;
+  background-color: #ffffff; /* Warna latar belakang logo WhatsApp */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Efek bayangan untuk menonjolkan logo */
+}
+
+.whatsapp-logo img {
+  width: 40px; /* Ukuran gambar logo WhatsApp */
+  height: auto;
+}
+
+/* Media Quaries */
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: rgba(218, 218, 218, 0.7);
+    width: 30rem;
+    height: 100vh;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: #fff;
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+
+  .about .row {
+    flex-wrap: wrap;
+  }
+
+  .about .row .about-img img {
+    height: 24rem;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .about .row .content {
+    padding: 0;
+  }
+
+  .about .row .content h3 {
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+
+  .about .row .content h3 {
+    font-size: 1.5rem;
+  }
+
+  .contact .row {
+    flex-wrap: wrap;
+  }
+
+  .contact .row .map {
+    height: 30rem;
+  }
+
+  .contact .row .contact-data {
+    padding-top: 1rem;
+  }
+}
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
